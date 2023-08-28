@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.content{
+    padding: 0 50px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:45px 50px;
+}
+.navbar .navlinks ul li{
+    display: inline-flex;
+    margin: 0 20px;
+}
+.navbar .navlinks ul li  a{
+    color: hsl(236, 13%, 42%);
+    transition: all .4s;
+}
+.navbar .navlinks ul li a:hover{
+    color: hsl(5, 85%, 63%);
+}
+.content .row .col img{
+    width: 700px;
+}
+p{
+    text-transform: lowercase;
+}
+.second-row{
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.first-row,.second-row{
+    width: 95%;
+}
+
+.second-row .right-col p{
+    color: hsl(236, 13%, 42%);
+    line-height: 25px;
+}
+.second-row .left-col h1{
+    font-weight: 800;
+    font-size: 50px;
+}
+.second-row .right-col button{
+    background-color: hsl(5, 85%, 63%);
+    padding: 10px 20px;
+    border: none;
+    margin: 30px 0;
+    color: white;
+    transition: all .4s;
+    cursor: pointer;
+}
+.second-row .right-col button:hover{
+    background-color: #000;
+}
+.content .row{
+    display: flex;
+}
+.content .row .col:nth-child(2){
+    background-color: hsl(240, 100%, 5%);
+    padding: 40px;
+    width: 80%;
+}
+hr{
+    border: none;
+    background:grey;
+    height: 1.3px;
+    margin: 20px 0;
+}
+.content .row .col:nth-child(2) h1{
+    color: hsl(35, 77%, 62%);
+    margin: 15px 0;
+}
+.content .row .col:nth-child(2) h2{
+    color: white;
+}
+.content .row .col:nth-child(2) p{
+    color: hsl(236, 13%, 42%);
+    margin: 10px 0;
+}
+.card img{
+    width: 80px;
+}
+.card{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.third-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+.card span{
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+    font-weight: 800;
+}
+.card h4:hover{
+    color: hsl(5, 85%, 63%);
+}
+.card h4{
+    transition: all .4s;
+    cursor: pointer;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.hamburger .bar{
+    background: #000;
+    display: block;
+    height: 4px;
+    width: 30px;
+    margin: 4px 0;
+}
+@media(max-width:728px){
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: 40%;
+    }
+    .hamburger.active{
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 10%;
+    }
+    .navbar{
+        position: relative;
+    }
+    .navlinks ul{
+        display: flex;
+        align-items: start;
+        gap: 30px;
+        justify-content: center;
+        flex-direction: column;
+        position:fixed;
+        background-color: white;
+        right: -100%;
+        left: 100%;
+        bottom: 0;
+        top: 0;
+    }
+    .navlinks ul.active{
+        left: 40%;
+        right: 0;
+    }
+    .content .row{
+        flex-direction: column;
+    }
+    .content .second-row{
+        flex-direction: column;
+        gap: 4%;
+    }
+    .content .third-row{
+        flex-direction: column;
+    }
+    .content .row .col img{
+        width: 110%;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(11px);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-11px);
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .blur-background{
+        display: none;
+    }
+    .blur-background.active{
+        display: block;
+        position: fixed;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-color: hsl(240, 100%, 5%);
+        opacity: 0.5
+    }
+    .content{
+        padding: 10px;
+    }
+    .row .col:nth-child(2){
+        width: 100%;
+    }
+    .third-row .card{
+        width: 150px;
+    }
+}
+body{
+    background: white;
+}
